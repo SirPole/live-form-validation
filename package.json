@@ -1,0 +1,19 @@
+{
+  "name": "live-form-validation",
+  "version": "1.9.1",
+  "description": "Live Form Validation (for Nette Forms 2.4)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SirPole/live-form-validation.git"
+  },
+  "author": "= <=> (=)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SirPole/live-form-validation/issues"
+  },
+  "homepage": "https://github.com/SirPole/live-form-validation#readme"
+}

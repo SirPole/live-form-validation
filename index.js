@@ -1,9 +1,9 @@
 /**
  * Live Form Validation for Nette Forms 2.4
  *
- * @author Robert Pösel, zakrava, Radek Ježdík, MartyIX, David Grudl
- * @version 1.9.0-dev
- * @url https://github.com/Robyer/nette-live-form-validation/
+ * @author Robert Pösel, zakrava, Radek Ježdík, MartyIX, David Grudl, Martin Brychta
+ * @version 1.9.1
+ * @url https://github.com/SirPole/live-form-validation/
  */
 
 var LiveForm = {
@@ -227,7 +227,7 @@ LiveForm.showValid = function(el) {
 	if (rules.length == 0) {
 		return false;
 	}
-  
+
 	if (Nette.getEffectiveValue(el) == '') {
 		return false;
 	}
@@ -258,7 +258,7 @@ LiveForm.getGroupElement = function(el) {
 
 LiveForm.getMessageId = function(el) {
 	var tmp = el.id + this.options.messageIdPostfix;
-	
+
 	// For elements without ID, or multi elements (with same name), we must generate whole ID ourselves
 	if (el.name && (!el.id || !el.form.elements[el.name].tagName)) {
 		// Strip possible [] from name
@@ -266,7 +266,7 @@ LiveForm.getMessageId = function(el) {
 		// Generate new ID based on form ID, element name and messageIdPostfix from options
 		tmp = (el.form.id ? el.form.id : 'frm') + '-' + name + this.options.messageIdPostfix;
 	}
-	
+
 	// We want unique ID which doesn't exist yet
 	var id = tmp,
 	    i = 0;
@@ -313,7 +313,7 @@ LiveForm.getMessageElement = function(el) {
 LiveForm.getMessageParent = function(el) {
 	var parentEl = el.parentNode;
 	var parentFound = false;
-	
+
 	if (this.options.messageParentClass !== false) {
 		parentFound = true;
 		while (!this.hasClass(parentEl, this.options.messageParentClass)) {
@@ -338,7 +338,7 @@ LiveForm.getMessageParent = function(el) {
 
 	// For multi elements (with same name) use parent's parent as parent (if wanted one is not found)
 	if (!parentFound && el.name && !el.form.elements[el.name].tagName) {
-		parentEl = parentEl.parentNode; 
+		parentEl = parentEl.parentNode;
 	}
 
 	return parentEl;
@@ -540,7 +540,7 @@ Nette.validateControl = function(elem, rules, onlyCheck, value, emptyOptional) {
 	if (elem.name && elem.name.match(/\[\]$/) && elem.type.toLowerCase() == 'checkbox') {
 		elem = elem.form.elements[elem.name].tagName ? elem : elem.form.elements[elem.name][0];
 	}
-	
+
 	elem = elem.tagName ? elem : elem[0]; // RadioNodeList
 	rules = rules || Nette.parseJSON(elem.getAttribute('data-nette-rules'));
 	value = value === undefined ? {value: Nette.getEffectiveValue(elem)} : value;

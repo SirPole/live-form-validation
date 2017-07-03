@@ -6,7 +6,7 @@ Script by default works nicely with Twitter Bootstrap 3, but you can customize t
 
 Installation
 ------------
-All you need is to link `live-form-validation.js` file from to your HTML document. That's it!
+All you need is to link `index.js` file from to your HTML document. That's it!
 
 The script already contains the `netteForms.js` file, so don't use it again and remove it from your HTML document.
 
@@ -15,7 +15,7 @@ Options
 You can change default options by calling `LiveForm.setOptions({ ... });` **after** including the script. Give only options that you want to change. For example:
 
 ```js
-<script src="/js/live-form-validation.js"></script> 
+<script src="/js/indexindex.js"></script> 
 <script>
 	LiveForm.setOptions({
 		messageErrorPrefix: 'Error: ',
@@ -33,7 +33,7 @@ Alternatively, if you want to set options **before** the script is loaded, creat
 		wait: 500
 	};
 </script> 
-<script src="/js/live-form-validation.js"></script> 
+<script src="/js/indexindex.js"></script> 
 ```
 
 ### Available options
