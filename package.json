@@ -35,9 +35,9 @@
 			"standard"
 		],
 		"globals": {
-			"clients": true,
 			"__DEV__": false,
-			"__PROD__": false
+			"__PROD__": false,
+			"Nette": true
 		},
 		"env": {
 			"browser": true,
