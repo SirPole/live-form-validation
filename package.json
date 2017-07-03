@@ -1,22 +1,81 @@
 {
-  "name": "live-form-validation",
-  "version": "1.9.1",
-  "description": "Live Form Validation (for Nette Forms 2.4)",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/SirPole/live-form-validation.git"
-  },
-  "author": "= <=> (=)",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/SirPole/live-form-validation/issues"
-  },
-  "homepage": "https://github.com/SirPole/live-form-validation#readme",
-  "dependencies": {
-    "nette-forms": "^2.4.2"
-  }
+	"name": "live-form-validation",
+	"version": "1.9.1",
+	"description": "Live Form Validation (for Nette Forms 2.4)",
+	"main": "index.js",
+	"scripts": {
+		"test": "eslint . --cache --color"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/SirPole/live-form-validation.git"
+	},
+	"author": "= <=> (=)",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/SirPole/live-form-validation/issues"
+	},
+	"homepage": "https://github.com/SirPole/live-form-validation#readme",
+	"babel": {
+		"babelrc": false,
+		"presets": [
+			[
+				"es2015",
+				{
+					"modules": false
+				}
+			],
+			"stage-0"
+		]
+	},
+	"eslintConfig": {
+		"root": true,
+		"parser": "babel-eslint",
+		"extends": [
+			"standard"
+		],
+		"globals": {
+			"clients": true,
+			"__DEV__": false,
+			"__PROD__": false
+		},
+		"env": {
+			"browser": true,
+			"node": true,
+			"commonjs": true,
+			"es6": true,
+			"jquery": true
+		},
+		"rules": {
+			"quotes": [
+				2,
+				"single"
+			],
+			"key-spacing": [
+				2,
+				{
+					"beforeColon": true,
+					"mode": "minimum",
+					"align": "colon"
+				}
+			],
+			"no-multi-spaces": 0,
+			"no-compare-neg-zero": 0
+		}
+	},
+	"dependencies": {
+		"nette-forms": "^2.4.2"
+	},
+	"devDependencies": {
+		"babel-core": "^6.24.1",
+		"babel-eslint": "^7.2.3",
+		"eslint": "^4.1.1",
+		"eslint-config-standard": "^10.2.1",
+		"eslint-loader": "^1.7.1",
+		"eslint-plugin-babel": "^4.1.1",
+		"eslint-plugin-import": "^2.2.0",
+		"eslint-plugin-node": "^4.2.2",
+		"eslint-plugin-promise": "^3.5.0",
+		"eslint-plugin-standard": "^3.0.1"
+	}
 }
