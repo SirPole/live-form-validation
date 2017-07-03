@@ -8,8 +8,6 @@ Installation
 ------------
 All you need is to link `index.js` file from to your HTML document. That's it!
 
-The script already contains the `netteForms.js` file, so don't use it again and remove it from your HTML document.
-
 Options
 -------
 You can change default options by calling `LiveForm.setOptions({ ... });` **after** including the script. Give only options that you want to change. For example:
